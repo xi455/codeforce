@@ -25,27 +25,15 @@ void vector_print(vector<int> temp)
     cout << endl;
 }
 
-int process(vector<int> vt_temp, int k)
+int process(vector<int> vt_temp, int n, int k)
 {
-    if (vt_temp[0] == 0)
-    {
-        return 0;
-    }
-
     int result = 0;
-    for (int index = 0; index < k; index++)
+    for (int index = 0; index < n; ++index)
     {
-        if (vt_temp[index] > k)
+        if (vt_temp[index] > 0 && vt_temp[index] >= vt_temp[k])
         {
             result += 1;
         }
-    }
-
-    k -= 1;
-    while ((k + 1) < (vt_temp.size() - 1) && vt_temp[k] == vt_temp[k + 1])
-    {
-        k += 1;
-        result += 1;
     }
 
     return result;
@@ -57,13 +45,14 @@ int main()
 
     int n, k;
     cin >> n >> k;
+    k--;
     cin.ignore();
 
     string temp;
     getline(cin, temp);
     vector<int> vt_temp = split_to_vector(temp, ' ');
 
-    int result = process(vt_temp, k);
+    int result = process(vt_temp, n, k);
 
     cout << result << '\n';
 }
