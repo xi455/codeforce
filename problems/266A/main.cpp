@@ -10,8 +10,6 @@ int main()
     cin.ignore();
     getline(cin, temp);
 
-    cout << temp << endl;
-
     for (int index = 1; index < n; index++)
     {
         if (temp[index] == temp[index - 1])
