@@ -18,22 +18,6 @@ int main() {
         }
     }
 
-    int answer;
-    while (x > 2) {
-        answer += 1;
-        x -= 1;
-    }
-    while (x < 2) {
-        answer += 1;
-        x += 1;
-    }
-    while (y > 2) {
-        answer += 1;
-        y -= 1;
-    }
-    while (y < 2) {
-        answer += 1;
-        y += 1;
-    }
+    int answer = abs(x - 2) + abs(y - 2);
     cout << answer << endl;
 }

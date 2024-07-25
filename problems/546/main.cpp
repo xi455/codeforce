@@ -14,5 +14,12 @@ int main()
         num += k * index;
     }
 
-    cout << num - n << endl;
+    if (num - n < 0)
+    {
+        cout << 0 << endl;
+    }
+    else
+    {
+        cout << num - n << endl;
+    }
 }
