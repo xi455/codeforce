@@ -1,22 +1,17 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
-int n, total = 0;
-int x, y, z;
+string temp1, temp2;
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    cin >> n;
-    total = 0;
-    while (n--)
-    {
-        cin >> x >> y >> z;
-        total += x + y + z;
-    }
+    cin >> temp1 >> temp2;
+    reverse(temp1.begin(), temp1.end());
 
-    if (total == 0)
+    if (temp1 == temp2)
     {
         cout << "YES" << endl;
     }
