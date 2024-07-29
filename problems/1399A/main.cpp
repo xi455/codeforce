@@ -19,6 +19,8 @@ int main()
             ve_temp.push_back(temp);
         }
 
+        sort(ve_temp.begin(), ve_temp.end());
+
         bool check = true;
         for (int index = 1; index < ve_temp.size(); index++)
         {

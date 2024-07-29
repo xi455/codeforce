@@ -15,7 +15,7 @@ int main()
         int num = 0;
         for (char c : temp)
         {
-            int current_num = find(temp.begin(), temp.end(), 'o') - temp.begin();
+            int current_num = find(temp.begin(), temp.end(), c) - temp.begin();
 
             if (current_num == temp.size())
             {
