@@ -22,7 +22,7 @@ int main()
         bool check = true;
         for (int index = 1; index < ve_temp.size(); index++)
         {
-            if (abs(ve_temp[index] - ve_temp[index - 1]) > 1)
+            if ((ve_temp[index] - ve_temp[index - 1]) > 1)
             {
                 check = false;
                 break;
